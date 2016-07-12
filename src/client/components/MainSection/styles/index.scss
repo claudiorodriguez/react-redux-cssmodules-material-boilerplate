@@ -1,0 +1,4 @@
+.main {
+  composes: box from '../../shared/styles/layout.scss';
+  background-image: url('../assets/logo.png');
+}
