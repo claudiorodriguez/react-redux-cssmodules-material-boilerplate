@@ -6,7 +6,6 @@ import RaisedButton from 'material-ui/RaisedButton';
 import AppBar from 'material-ui/AppBar';
 import Card from 'material-ui/Card';
 
-
 class MainSection extends Component {
   // default constructor left for illustration purposes
   constructor(props, context) {
