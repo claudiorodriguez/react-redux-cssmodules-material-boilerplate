@@ -15,7 +15,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('lintScripts', () => {
-  return gulp.src(['gulpfile.js', '{src,__tests__}/**/*.js'])
+  return gulp.src(['gulpfile.js', '{src,test}/**/*.js'])
     .pipe(esLint())
     .pipe(esLint.format())
     .pipe(esLint.failAfterError());
