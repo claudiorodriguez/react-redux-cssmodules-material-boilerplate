@@ -1,5 +1,5 @@
 # react-redux-cssmodules-material-example
-A working example of a stub app based on React, Redux, CSS Modules, Material UI, and Webpack
+A working example of a stub app based on React, Redux, CSS Modules, Material UI, and Webpack. Testing with Mocha and Enzyme.
 
 ## What it is
 This is intended to be a boilerplate, a working stub project that comes with all the following working together out of the box:
@@ -11,6 +11,7 @@ This is intended to be a boilerplate, a working stub project that comes with all
  * [react-hot-loader]
  * [react-css-modules]
  * [gulp] with [eslint] and [sass-lint]
+ * [mocha] and [enzyme] for testing
 
 ## Installation
 
@@ -20,6 +21,7 @@ This is intended to be a boilerplate, a working stub project that comes with all
  * `npm run build` to build for production environment, output is on `dist`
  * `npm run start` to start stub server serving production assets, go to `localhost:8090/public`
  * `npm run validate` to validate js/scss (useful for git hooks)
+ * `npm run test` to run tests
 
 ## Contributing
 
@@ -29,10 +31,6 @@ Feel free to create a pull request, raise issues, etc.
 
 As this is a boilerplate, feel free to base any project on it.
 As for the boilerplate project itself, license is MIT - see [LICENSE][license-url]
-
-## TODO
-
- * test tooling (considering either `mocha` + `enzyme`, or `jest`)
 
 [license-url]: ./LICENSE
 [react]: https://github.com/facebook/react
@@ -44,3 +42,5 @@ As for the boilerplate project itself, license is MIT - see [LICENSE][license-ur
 [gulp]: https://github.com/gulpjs/gulp
 [sass-lint]: https://github.com/sasstools/sass-lint
 [eslint]: https://github.com/eslint/eslint
+[mocha]: https://github.com/mochajs/mocha
+[enzyme]: https://github.com/airbnb/enzyme
