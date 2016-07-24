@@ -11,8 +11,10 @@ server
   .use(compression());
 
 server
-  .use('/public/static', express.static(path.join(__dirname, '../../dist/')))
-  .use('/public', (req, res) => { res.sendFile(path.join(__dirname, '../../src/client/index.html')); });
+  .use('/static', express.static(path.join(__dirname, '../../dist/')))
+  .use('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../src/client/index.html'));
+  });
 
 server.listen(port);
 process.on('exit', () => {

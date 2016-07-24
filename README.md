@@ -6,6 +6,8 @@ This is intended to be a boilerplate, a working stub project that comes with all
 
  * [react]
  * [redux]
+ * [react-router]
+ * [react-router-redux]
  * [material-ui]
  * [webpack]
  * [react-hot-loader]
@@ -37,6 +39,8 @@ As for the boilerplate project itself, license is MIT - see [LICENSE][license-ur
 [redux]: https://github.com/reactjs/redux
 [material-ui]: https://github.com/callemall/material-ui
 [webpack]: https://github.com/webpack/webpack
+[react-router]: https://github.com/reactjs/react-router
+[react-router-redux]: https://github.com/reactjs/react-router-redux
 [react-hot-loader]: https://github.com/gaearon/react-hot-loader
 [react-css-modules]: https://github.com/gajus/react-css-modules
 [gulp]: https://github.com/gulpjs/gulp

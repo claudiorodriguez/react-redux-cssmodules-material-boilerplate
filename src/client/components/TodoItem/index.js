@@ -1,24 +1,16 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 
-class TodoItem extends Component {
-  constructor(props, context) {
-    super(props, context);
-  }
-
-  render() {
-    const { todo } = this.props;
-
-    return (
-      <li>
-        <div>
-          {todo.id}
-        </div>
-        <div>
-          {todo.text}
-        </div>
-      </li>
-    );
-  }
+function TodoItem({ todo }) {
+  return (
+    <li>
+      <div>
+        {todo.id}
+      </div>
+      <div>
+        {todo.text}
+      </div>
+    </li>
+  );
 }
 
 TodoItem.propTypes = {

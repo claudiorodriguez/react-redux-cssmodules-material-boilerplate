@@ -1,39 +1,19 @@
-import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import MainSection from '../components/MainSection';
-import * as TodoActions from '../actions';
+import React, { PropTypes } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import UiFrame from '../components/UiFrame';
 
-class App extends Component {
-  render() {
-    const { todos, actions } = this.props;
-    return (
-      <MuiThemeProvider>
-        <MainSection todos={todos} actions={actions} />
-      </MuiThemeProvider>
-    );
-  }
+function App({ children }) {
+  return (
+    <MuiThemeProvider>
+      <UiFrame>
+        {children}
+      </UiFrame>
+    </MuiThemeProvider>
+  );
 }
 
 App.propTypes = {
-  todos: PropTypes.array.isRequired,
-  actions: PropTypes.object.isRequired
+  children: PropTypes.element.isRequired
 };
 
-function mapStateToProps(state) {
-  return {
-    todos: state.todos
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(TodoActions, dispatch)
-  };
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default App;

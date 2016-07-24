@@ -3,8 +3,5 @@
   border-style: solid;
   padding: 0 20px;
   margin: 0 6px;
-}
-
-:global {
-  @import 'roboto-fontface/css/roboto/roboto-fontface.css';
+  font-family: 'Roboto';
 }

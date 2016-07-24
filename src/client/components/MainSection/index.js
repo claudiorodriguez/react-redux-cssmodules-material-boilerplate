@@ -1,36 +1,13 @@
-import React, { Component, PropTypes } from 'react';
-import TodoItem from '../TodoItem';
-import CSSModules from 'react-css-modules';
-import styles from './styles/index.scss';
-import RaisedButton from 'material-ui/RaisedButton';
-import AppBar from 'material-ui/AppBar';
-import Card from 'material-ui/Card';
+import React, { PropTypes } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as TodoActions from '../../actions';
+import TodoList from '../TodoList';
 
-class MainSection extends Component {
-  // default constructor left for illustration purposes
-  constructor(props, context) {
-    super(props, context);
-  }
-
-  render() {
-    const { todos } = this.props;
-
-    return (
-      <Card styleName="main">
-        <AppBar
-          title="Title"
-          iconClassNameRight="muidocs-icon-navigation-expand-more"
-        />
-        <ul>
-          {todos.map(todo =>
-            <TodoItem key={todo.id} todo={todo} />
-          )}
-        </ul>
-        <RaisedButton label="Default" />
-        <div>hello world</div>
-      </Card>
-    );
-  }
+function MainSection({ todos, actions }) {
+  return (
+    <TodoList todos={todos} actions={actions} />
+  );
 }
 
 MainSection.propTypes = {
@@ -38,4 +15,16 @@ MainSection.propTypes = {
   actions: PropTypes.object.isRequired
 };
 
-export default CSSModules(MainSection, styles);
+function mapStateToProps(state) {
+  return {
+    todos: state.todos
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(TodoActions, dispatch)
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainSection);
